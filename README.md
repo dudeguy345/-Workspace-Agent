@@ -48,17 +48,3 @@ pytest -q                                 # tests (no API key needed)
 ```
 
 Optional settings: `AGENT_MODEL` (default `claude-opus-5-5`), `AGENT_EFFORT` (`low`/`medium`/`high`, default `medium`).
-
-## Deploy (Streamlit Community Cloud, free)
-1. Push this repo to GitHub.
-2. Go to https://share.streamlit.io → **Create app** → choose the repo, branch `main`, file `app.py`.
-3. **Advanced settings → Secrets**: `ANTHROPIC_API_KEY = "sk-ant-..."`
-4. Deploy and use the resulting `https://<name>.streamlit.app` URL for submission.
-
-Each browser session gets its own sandboxed workspace seeded from `sample_workspace/`.
-
-## Demo script (1–2 min)
-1. “What files do I have? Summarize meeting_notes.md” — file reading + summary.
-2. “Turn the action items in meeting_notes.md into tasks” — multi-step: file → database.
-3. “What's the weather in Pomona, CA? Save it to notes/weather.md” — API → file.
-4. “Delete budget.csv” — show the approval card, click **Deny**, then show the audit log tab.
